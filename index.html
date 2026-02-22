@@ -1,132 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SecureTech Cyber Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>SecureTech Solutions</title>
+
 <style>
-/* Reset & body */
-*{margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif;}
-html{scroll-behavior:smooth;}
-body{background-color:#f7f9fc; color:#333;}
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+scroll-behavior:smooth;
+}
 
-/* Header */
+section{
+padding:100px 10%;
+}
+
+h1,h2,h3{text-align:center}
+
 header{
-    background-color:#0d47a1;
-    color:#fff;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    flex-wrap:wrap;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.8);
+z-index:1000;
 }
-header h1{font-size:1.8rem;}
-nav ul{list-style:none; display:flex; gap:25px;}
-nav ul li a{
-    color:#fff; text-decoration:none; font-weight:500; padding:5px 8px; border-radius:5px; transition: all 0.3s ease;
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
 }
-nav ul li a:hover{background-color:#ffeb3b; color:#0d47a1;}
 
-/* Hamburger for mobile */
-.hamburger{display:none; font-size:1.5rem; cursor:pointer;}
+.logo{
+color:#00f5ff;
+font-weight:bold;
+font-size:20px;
+}
 
-/* Hero section */
+nav ul{
+list-style:none;
+display:flex;
+}
+
+nav ul li{
+margin:0 15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+cursor:pointer;
+}
+
+nav a:hover{color:#00f5ff}
+
+/* HERO */
 .hero{
-    background: linear-gradient(135deg,#1976d2,#42a5f5);
-    color:#fff;
-    text-align:center;
-    padding:120px 20px 80px;
-    position:relative;
+margin-top:120px;
+text-align:center;
 }
-.hero h2{font-size:2.8rem; margin-bottom:20px; transition:transform 0.3s;}
-.hero h2:hover{transform:scale(1.05);}
-.hero p{font-size:1.1rem; max-width:650px; margin:0 auto 30px;}
-.hero .cta-btn{
-    background-color:#ffeb3b; color:#0d47a1; font-weight:bold;
-    padding:15px 35px; border:none; border-radius:10px; cursor:pointer; transition: all 0.3s ease;
+
+.hero span{color:#00f5ff}
+
+.hero-img{
+margin-top:40px;
+text-align:center;
 }
-.hero .cta-btn:hover{background-color:#fdd835; transform:scale(1.05);}
 
-/* Services */
-.services{padding:90px 20px; text-align:center;}
-.services h2{font-size:2.2rem; margin-bottom:50px;}
-.service-container{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px; max-width:1200px; margin:0 auto;
+.hero-img img{
+width:70%;
+max-width:600px;
+border-radius:20px;
+box-shadow:0 0 40px #00f5ff;
 }
-.service-box{
-    background-color:#fff; padding:30px 20px; border-radius:15px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12); transition: all 0.3s ease; cursor:pointer;
+
+/* SERVICES */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
 }
-.service-box:hover{transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.18); background-color:#e3f2fd;}
-.service-box i{font-size:2.3rem; color:#0d47a1; margin-bottom:15px; transition: transform 0.3s;}
-.service-box:hover i{transform:rotate(15deg) scale(1.15);}
-.service-box h3{margin-bottom:15px; font-size:1.4rem; color:#0d47a1;}
-.service-box p{font-size:1rem; color:#555;}
 
-/* Contact section */
-#contact{padding:80px 20px; text-align:center; background-color:#e1f5fe; border-radius:15px; margin:50px auto; max-width:900px;}
-#contact h2{margin-bottom:20px; font-size:2rem;}
-#contact p{font-size:1rem;}
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+cursor:pointer;
+transition:0.3s;
+}
 
-/* Footer */
-footer{background-color:#0d47a1; color:#fff; text-align:center; padding:25px 10px; margin-top:40px;}
+.card:hover{
+box-shadow:0 0 25px #00f5ff;
+transform:translateY(-5px);
+}
 
-/* Responsive */
+/* CLIENT STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+text-align:center;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+width:200px;
+box-shadow:0 0 20px rgba(0,245,255,0.3);
+}
+
+.stat-box h2{
+font-size:40px;
+color:#00f5ff;
+margin:0;
+}
+
+/* FAQ */
+.faq-item{
+background:rgba(255,255,255,0.05);
+margin:15px 0;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+margin-top:10px;
+color:#ccc;
+}
+
+/* CONTACT */
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+background:#00f5ff;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00c3cc;
+}
+
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;top:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.modal-content{
+background:white;
+color:black;
+margin:8% auto;
+padding:30px;
+width:60%;
+border-radius:10px;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+margin-top:50px;
+}
+
 @media(max-width:768px){
-    nav ul{flex-direction:column; gap:15px; display:none;}
-    nav ul.active{display:flex;}
-    .hamburger{display:block; color:#fff;}
-    header{flex-wrap:wrap;}
-    .hero h2{font-size:2rem;}
+.contact-container{grid-template-columns:1fr}
+.stats{flex-direction:column;align-items:center}
+.hero-img img{width:90%}
+.modal-content{width:90%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>SecureTech Cyber Solutions</h1>
-    <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
-    <nav>
-        <ul id="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+<div class="logo">SecureTech</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a onclick="openTerms()">Terms</a></li>
+</ul>
+</nav>
 </header>
 
-<section id="hero" class="hero">
-    <h2>Protecting Your Digital World</h2>
-    <p>Providing top-notch cyber security and IT solutions to keep your systems safe, reliable, and efficient.</p>
-    <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+<!-- HOME -->
+<section class="hero" id="home">
+<h1>We Secure Your <span id="typing"></span></h1>
+<p>Professional Cyber Security & IT Services for Growing Businesses.</p>
+
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" alt="Cyber Security">
+</div>
 </section>
 
-<section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-container">
-        <div class="service-box"><i class="fas fa-laptop-code"></i><h3>Laptop & Desktop Repair</h3><p>Expert hardware & software repair for all types of computers.</p></div>
-        <div class="service-box"><i class="fas fa-video"></i><h3>CCTV Installation</h3><p>Professional surveillance solutions for home & office security.</p></div>
-        <div class="service-box"><i class="fas fa-shield-alt"></i><h3>Cyber Security Consulting</h3><p>Protect digital assets with our expert consulting services.</p></div>
-        <div class="service-box"><i class="fas fa-globe"></i><h3>Website Development</h3><p>Custom responsive & secure websites for your business.</p></div>
-        <div class="service-box"><i class="fas fa-database"></i><h3>Data Recovery</h3><p>Reliable solutions to recover lost or corrupted data efficiently.</p></div>
-    </div>
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="services-grid">
+<div class="card" onclick="openService('cyber')">
+<h3>Cyber Security</h3>
+<p>Protect your systems and networks.</p>
+</div>
+
+<div class="card" onclick="openService('web')">
+<h3>Web Development</h3>
+<p>Modern secure business websites.</p>
+</div>
+
+<div class="card" onclick="openService('it')">
+<h3>IT Support</h3>
+<p>24/7 technical assistance.</p>
+</div>
+</div>
+
+<!-- CLIENT STATS SECTION -->
+<div class="stats">
+<div class="stat-box">
+<h2 id="projects">0</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h2 id="clients">0</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat-box">
+<h2 id="experience">0</h2>
+<p>Years Experience</p>
+</div>
+</div>
+
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+What services do you provide?
+<div class="faq-answer">We provide Cyber Security, Web Development and IT Support.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+Do you support startups?
+<div class="faq-answer">Yes, we specialize in supporting small and medium businesses.</div>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@securetech.com | Phone: +91-12345-67890</p>
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+<div>
+<p>Email: support@securetech.com</p>
+<p>Location: Bhimavaram, Andhra Pradesh</p>
+<p>Phone: +91 9876543210</p>
+</div>
+
+<form onsubmit="submitForm(event)">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+<p id="msg"></p>
 </section>
 
-<footer>&copy; 2026 SecureTech Cyber Solutions</footer>
+<footer>
+© 2026 SecureTech Solutions
+</footer>
+
+<!-- SERVICE MODAL -->
+<div id="serviceModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">X</span>
+<p id="serviceText"></p>
+</div>
+</div>
+
+<!-- TERMS MODAL -->
+<div id="termsModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeTerms()">X</span>
+<h3>Terms & Conditions</h3>
+<p>All services are handled securely and professionally.</p>
+</div>
+</div>
 
 <script>
-function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+
+/* Typing */
+let words="Digital Business";
+let i=0;
+function type(){
+if(i<words.length){
+document.getElementById("typing").innerHTML+=words.charAt(i);
+i++;
+setTimeout(type,80);
+}}
+type();
+
+/* Counter Animation */
+function animate(id,target){
+let count=0;
+let interval=setInterval(()=>{
+count+=2;
+document.getElementById(id).innerText=count;
+if(count>=target){
+document.getElementById(id).innerText=target;
+clearInterval(interval);
+}
+},30);
+}
+animate("projects",150);
+animate("clients",120);
+animate("experience",10);
+
+/* Modals */
+function openService(type){
+let text="";
+if(type==="cyber"){text="Cyber security includes firewall setup, testing and monitoring.";}
+if(type==="web"){text="We build responsive and secure websites.";}
+if(type==="it"){text="Complete IT support and maintenance.";}
+document.getElementById("serviceText").innerText=text;
+document.getElementById("serviceModal").style.display="block";
+}
+function closeModal(){document.getElementById("serviceModal").style.display="none";}
+function openTerms(){document.getElementById("termsModal").style.display="block";}
+function closeTerms(){document.getElementById("termsModal").style.display="none";}
+
+/* FAQ */
+function toggleFAQ(el){
+let answer=el.querySelector(".faq-answer");
+answer.style.display=answer.style.display==="block"?"none":"block";
+}
+
+/* Form */
+function submitForm(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+if(name===""||email===""||message===""){
+document.getElementById("msg").innerHTML="Please fill all fields!";
+return;
+}
+document.getElementById("msg").innerHTML="Message Sent Successfully!";
+}
 </script>
 
 </body>
